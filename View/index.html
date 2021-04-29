@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App - JavaScript</title>
+    <link rel="stylesheet" href="../View/style.css">
+</head>
+<body>
+    <div class="budget-container">
+        <div class="app-title">
+            <a href=""><b>Budget Management System</b></a>
+        </div>
+        <div class="budget-header">
+            <div class="balance">
+                <div class="title">
+                    Balance
+                </div>
+                <div class="value">
+                    <small>৳</small>0
+                </div>
+            </div>
+            <div class="account">
+                <div class="income">
+                    <div class="title">
+                        Income
+                    </div>
+                    <div class="income-total">
+                        <small>৳</small>0
+                    </div>
+                </div>
+                <div class="chart"></div>
+                <div class="outcome">
+                    <div class="title">
+                        Expenses
+                    </div>
+                    <div class="outcome-total">
+                        <small>৳</small>0
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="budget-dashboard">
+            <div class="dash-title">Dashboard</div>
+            <div class="toggle">
+                <div class="tab1">Expenses</div>
+                <div class="tab2">Income</div>
+                <div class="tab4">Tax Calculator</div>
+                <div class="tab3 active">All</div>
+            </div>
+            <div class="hide" id="income">
+                <ul class="list"></ul>
+                <div class="input">
+                    <input type="text" id="income-title-input" name="title" placeholder="Title">
+                    <input type="number" id="income-amount-input" name="amount" placeholder="৳0">
+                    <div class="add-income"><img src="../icon/plus.png" alt=""></div>
+                </div>
+            </div>
+            <div class="hide" id="expense">
+                <ul class="list"></ul>
+                <div class="input">
+                    <input type="text" id="expense-title-input" name="title" placeholder="Title">
+                    <input type="number" id="expense-amount-input" name="amount" placeholder="৳0">
+                    <div class="add-expense"><img src="../icon/plus.png" alt=""></div>
+                </div>
+            </div>
+            <div class="hide" id="tax">
+                <ul class="list"></ul>
+                <div class = "main-wrapper">
+                    <form>
+                        <div>
+                            <label for = "net-price">NET Price</label>
+                            <input type = "text" id = "net-price" placeholder="0.00">
+                        </div>
+    
+                        <div>
+                            <label for = "vat-rate">VAT Rate (%)</label>
+                            <input type = "text" id = "vat-rate" placeholder="%0.00">
+                        </div>
+    
+                        <div>
+                            <label for = "inc-amount">VAT Inclusive Price</label>
+                            <input type = "text" id = "inc-amount" placeholder="0.00" disabled = true>
+                        </div>
+                    </form>
+                </div>
+    
+                <button type = "button" class = "main-btn" id = "calc-btn">Calculate</button>
+    
+                <button type = "button" class = "main-btn" id = "reset-btn">Reset</button>
+            </div>
+            <div id="all">
+                <ul class="list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Model/chart.js"></script>
+    <script src="..//Model/budgetTotal.js"></script>
+    <script src="..//Model/tax.js"></script>
+    <script src="..//Controller/budgetTotalController.js"></script>
+    <script src="..//Controller/expenseController.js"></script>
+    <script src="..//Controller/incomeController.js"></script>
+    <script src="..//Controller/taxController.js"></script>
+    <script src="..//Controller/chartController.js"></script>
+</body>
+</html>
