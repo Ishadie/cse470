@@ -4,6 +4,8 @@ function calculateTotal(list){
 
     for(var i in list) 
     { sum += list[i]; }
+        
+    
 
     return sum;
 }
