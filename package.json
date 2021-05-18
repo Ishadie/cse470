@@ -1,0 +1,25 @@
+{
+  "name": "cse470",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ishadie/cse470.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ishadie/cse470/issues"
+  },
+  "homepage": "https://github.com/Ishadie/cse470#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
